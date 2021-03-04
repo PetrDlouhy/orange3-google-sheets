@@ -39,6 +39,7 @@ DATA_FILES = [
 INSTALL_REQUIRES = [
     'Orange3',
     'google-auth-oauthlib',
+    'google-api-python-client',
 ]
 
 ENTRY_POINTS = {
