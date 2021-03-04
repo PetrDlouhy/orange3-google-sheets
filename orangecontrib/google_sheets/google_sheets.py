@@ -15,8 +15,7 @@ SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 class GSheetWriter(FileFormat, DataTableMixin):
     @classmethod
     def open_sheet(cls, creds_token=None):
-        credentials_file_name = pathlib.Path().absolute() + '/credentials.json'
-        print(credentials_file_name)
+        credentials_file_name = str(pathlib.Path().absolute()) + '/credentials.json'
         creds = None
         # The file token.pickle stores the user's access and refresh tokens,
         # and is created automatically when the authorization flow completes
@@ -28,8 +27,14 @@ class GSheetWriter(FileFormat, DataTableMixin):
             if creds and creds.expired and creds.refresh_token:
                 creds.refresh(Request())
             else:
-                flow = InstalledAppFlow.from_client_secrets_file(
-                    credentials_file_name, SCOPES)
+                try:
+                    flow = InstalledAppFlow.from_client_secrets_file(
+                        credentials_file_name, SCOPES)
+                except FileNotFoundError:
+                    # TODO: remove this fallback once credentials are in source
+                    flow = InstalledAppFlow.from_client_secrets_file(
+                        './credentials.json', SCOPES)
+
                 creds = flow.run_local_server(port=0)
         service = build('sheets', 'v4', credentials=creds)
         # Call the Sheets API
