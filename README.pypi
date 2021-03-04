@@ -1,11 +1,7 @@
-Orange3 Explain
-===============
+Orange3 Google sheets export
+============================
 
 Short description for the PyPI.
 See [documentation](http://orange3-imageanalytics.readthedocs.org/).
 
-Features
---------
-#### List of key features
-* Feature 1
-* Feature 2
+Adds Google sheets export widget

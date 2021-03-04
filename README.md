@@ -1,21 +1,20 @@
-Orange3 Example Add-on
-======================
+Orange3 Google sheets Add-on
+===================================
 
-This is an example add-on for [Orange3](http://orange.biolab.si). Add-on can extend Orange either 
-in scripting or GUI part, or in both. We here focus on the GUI part and implement a simple (empty) widget,
-register it with Orange and add a new workflow with this widget to example tutorials.
+Google sheets add-on for [Orange3](http://orange.biolab.si).
+It adds Google sheets export widget.
 
 Installation
 ------------
 
 To install the add-on from source run
 
-    pip install .
+    pip install git+https://github.com/PetrDlouhy/orange3-google-sheets#egg=orange3-google-sheets
 
 To register this add-on with Orange, but keep the code in the development directory (do not copy it to 
 Python's site-packages directory), run
 
-    pip install -e .
+    pip install -e git+https://github.com/PetrDlouhy/orange3-google-sheets#egg=orange3-google-sheets
 
 Documentation / widget help can be built by running
 
