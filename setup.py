@@ -7,10 +7,10 @@ from setuptools import setup, find_packages
 
 NAME = "Orange3 Google sheets Add-on"
 
-VERSION = "0.0.3"
+VERSION = "0.0.1"
 
-AUTHOR = 'Bioinformatics Laboratory, FRI UL'
-AUTHOR_EMAIL = 'contact@orange.biolab.si'
+AUTHOR = 'Petr Dlouhý'
+AUTHOR_EMAIL = 'petr.dlouhy@email.cz'
 
 URL = 'http://orange.biolab.si/download'
 DESCRIPTION = "Add-on managing Google sheets export"
@@ -59,7 +59,7 @@ ENTRY_POINTS = {
         # Syntax: category name = path.to.package.containing.widgets
         # Widget category specification can be seen in
         #    orangecontrib/google_sheets/widgets/__init__.py
-        'Examples = orangecontrib.google_sheets.widgets',
+        'Google sheets = orangecontrib.google_sheets.widgets',
     ),
 
     # Register widget help

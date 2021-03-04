@@ -9,7 +9,7 @@ from Orange.widgets.settings import Setting
 from Orange.widgets.utils.widgetpreview import WidgetPreview
 from Orange.widgets.utils.state_summary import format_summary_details
 
-from Orange.widgets.google_sheets import GSheetWriter
+from ..google_sheets import GSheetWriter
 
 _userhome = os.path.expanduser(f"~{os.sep}")
 
