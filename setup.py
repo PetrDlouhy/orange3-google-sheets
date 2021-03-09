@@ -5,7 +5,7 @@ from os import path, walk
 import sys
 from setuptools import setup, find_packages
 
-NAME = "Orange3 Google sheets Add-on"
+NAME = "orange3-google-sheets"
 
 VERSION = "0.0.1"
 
